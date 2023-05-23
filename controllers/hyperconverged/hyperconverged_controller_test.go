@@ -141,7 +141,8 @@ var _ = Describe("HyperconvergedController", func() {
 
 				hco := commonTestUtils.NewHco()
 				hco.Spec.FeatureGates = hcov1beta1.HyperConvergedFeatureGates{
-					WithHostPassthroughCPU: pointer.Bool(true),
+					WithHostPassthroughCPU:    pointer.Bool(true),
+					DeployTektonTaskResources: pointer.Bool(true),
 				}
 
 				cl := commonTestUtils.InitClient([]runtime.Object{hcoNamespace, hco})
