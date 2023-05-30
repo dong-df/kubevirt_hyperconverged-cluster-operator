@@ -240,6 +240,7 @@ func getNewManagerCache(operatorNamespace string) cache.NewCacheFunc {
 					Label: labelSelector,
 					Field: namespaceSelector,
 				},
+				&apiextensionsv1.CustomResourceDefinition{}: {},
 			},
 		},
 	)
